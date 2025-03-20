@@ -8,7 +8,16 @@ compinit
 
 export XDG_CONFIG_HOME="$HOME/.config"
 export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH=$HOME/.bun/bin:$HOME/.cargo/bin:$(brew --prefix)/opt/llvm/bin:$HOME/.console-ninja/.bin:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$PATH
+
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  # macOS
+  BREW_HOME="/opt/homebrew"  # 新版 macOS
+else
+  # Linux
+  BREW_HOME="/home/linuxbrew/.linuxbrew/"
+fi
+
+export PATH=$HOME/.bun/bin:$HOME/.cargo/bin:$BREW_HOME/bin:$BREW_HOME/opt/llvm/bin:$HOME/.console-ninja/.bin:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$PATH
 
 export EDITOR=hx
 
