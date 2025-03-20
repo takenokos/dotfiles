@@ -1,0 +1,17 @@
+.config/bat/themes/*
+.config/bottom/macchiato.toml
+
+.config/gitui/theme.ron
+
+.config/helix/external-snippets
+.config/helix/languages.toml
+
+.config/yazi/theme.toml
+.confi/yazi/plugins/*
+
+git
+
+zsh/.zsh/ohmyzsh-plugins-git/*
+zsh/.zprofile
+
+.exclude*

@@ -1,0 +1,12 @@
+[submodule "zsh/.zsh/zsh-syntax-highlighting"]
+	path = zsh/.zsh/zsh-syntax-highlighting
+	url = git@github.com:zsh-users/zsh-syntax-highlighting.git
+[submodule "zsh/.zsh/catppuccin-zsh-syntax-highlighting"]
+	path = zsh/.zsh/catppuccin-zsh-syntax-highlighting
+	url = git@github.com:catppuccin/zsh-syntax-highlighting.git
+[submodule "zsh/.zsh/git-open"]
+	path = zsh/.zsh/git-open
+	url = git@github.com:paulirish/git-open.git
+[submodule "zsh/.zsh/zsh-autosuggestions"]
+	path = zsh/.zsh/zsh-autosuggestions
+	url = git@github.com:zsh-users/zsh-autosuggestions.git

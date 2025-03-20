@@ -1,0 +1,43 @@
+[[sources]] # list of sources to load
+name = "friendly-snippets"  # optional name shown on snippet description
+git = "https://github.com/rafamadriz/friendly-snippets.git" # git repo with snippets collections
+
+[[sources.paths]] # list of paths to load on current source
+scope = ["rust","rustdoc"]  # optional scopes for current snippets
+path = "snippets/rust"  # where snippet file or dir located in repo
+
+[[sources.paths]]
+scope = ["css"]
+path = "snippets/css.json"
+
+[[sources.paths]]
+scope = ["html"]
+path = "snippets/html.json"
+
+[[sources.paths]]
+scope = ["javascript","jsdoc","next-ts","next","react-es7","react-native-ts","react-native","react-ts","react","tsdoc","typescript"]
+path = "snippets/javascript"
+
+[[sources.paths]]
+scope = ["nushell"]
+path = "snippets/nushell.json"
+
+[[sources.paths]]
+scope = ["rmarkdown"]
+path = "snippets/rmarkdown.json"
+
+[[sources.paths]]
+scope = ["shell","shelldoc"]
+path = "snippets/shell"
+
+[[sources.paths]]
+scope = ["sql"]
+path = "snippets/sql.json"
+
+[[sources.paths]]
+scope = ["svelte"]
+path = "snippets/svelte.json"
+
+[[sources.paths]]
+scope = ["swift"]
+path = "snippets/swift.json"

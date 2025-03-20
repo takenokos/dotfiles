@@ -1,0 +1,2 @@
+"inherits" = "catppuccin_macchiato"  # 继承自某个已有主题
+"ui.background" = ""  # 设置背景为空以"使用"终端的背景

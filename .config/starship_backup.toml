@@ -1,0 +1,99 @@
+# format 调整了 $line_break 换行位置,$cmd_duration 指令执行时间
+
+format = """
+$username\
+$hostname\
+$localip\
+$shlvl\
+$singularity\
+$kubernetes\
+$directory\
+$vcsh\
+$git_branch\
+$git_commit\
+$git_state\
+$git_metrics\
+$git_status\
+$hg_branch\
+$docker_context\
+$package\
+$cmake\
+$cobol\
+$container\
+$dart\
+$deno\
+$dotnet\
+$elixir\
+$elm\
+$erlang\
+$golang\
+$helm\
+$java\
+$julia\
+$kotlin\
+$lua\
+$nim\
+$nodejs\
+$ocaml\
+$perl\
+$php\
+$pulumi\
+$purescript\
+$python\
+$rlang\
+$red\
+$ruby\
+$rust\
+$scala\
+$swift\
+$terraform\
+$vlang\
+$vagrant\
+$zig\
+$nix_shell\
+$conda\
+$memory_usage\
+$aws\
+$gcloud\
+$openstack\
+$azure\
+$env_var\
+$crystal\
+$custom\
+$sudo\
+$jobs\
+$battery\
+$time\
+$status\
+$shell\
+$cmd_duration\
+$line_break\
+$character"""
+
+# git修改行数
+[git_metrics]
+disabled = false
+format = '([+$added]($added_style)/[-$deleted]($deleted_style) )'
+
+# git状态
+[git_status]
+format = '(([\[$all_status\]]($style))$ahead_behind )'
+up_to_date = "[✓](bright-green)"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+conflicted = "[=${count}](bright-red)"
+ahead = "[⇡${count}](white)"
+behind = "[⇣${count}](white)"
+untracked = "[?${count}](cyan)"
+stashed = "[$${count}](bright-purple)"
+modified = "[!${count}](blue)"
+staged = "[+${count}](green)"
+renamed = "[»${count}](yellow)"
+deleted = "[✘${count}](red)"
+
+# 电池数值小于等于100就显示 默认10
+[[battery.display]]
+threshold = 100
+
+# 显示时间
+[time]
+disabled = false
