@@ -9,7 +9,8 @@
 .config/yazi/theme.toml
 .confi/yazi/plugins/*
 
-git
+git/*
+.config/git/catppuccin.gitconfig
 
 zsh/.zsh/ohmyzsh-plugins-git/*
 zsh/.zprofile

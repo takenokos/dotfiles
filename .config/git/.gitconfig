@@ -1,0 +1,30 @@
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	
+[include]
+	path = ~/.config/git/./catppuccin.gitconfig
+	
+[core]
+	excludesfile = ~/.config/git/.gitignore
+	pager = delta
+	
+[interactive]
+	diffFilter = delta --color-only
+	
+[delta]
+	features = catppuccin-macchiato
+	navigate = true    # use n and N to move between diff sections
+	side-by-side = true
+	line-numbers = true
+
+[merge]
+	conflictstyle = zdiff3
+
+[diff]
+	colorMoved = default
+	
+[init]
+	defaultBranch = main
