@@ -54,7 +54,7 @@ language-servers = ["scls","vscode-json-language-server" ]
 
 
 [language-server.typescript-language-server.config]
-plugins = [{ name = "@vue/typescript-plugin", location = "$HOME/node_modules/@vue/language-server", languages = ["vue"] }]
+plugins = [{ name = "@vue/typescript-plugin", location = "$HOME/.bun/install/global/node_modules/@vue/language-server", languages = ["vue"] }]
 
 [language-server.volar]
 command = "vue-language-server"
@@ -62,7 +62,7 @@ args = ["--stdio"]
 
 [language-server.volar.config]
 #vue = { hybridMode = false }
-typescript = { tsdk = "$HOME/node_modules/typescript/lib" }
+typescript = { tsdk = "$HOME/.bun/install/global/node_modules/typescript/lib" }
 
 [language-server.tailwindcss-language-server]
 command = "tailwindcss-language-server"

@@ -14,7 +14,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   BREW_HOME="/opt/homebrew"  # 新版 macOS
 else
   # Linux
-  BREW_HOME="/home/linuxbrew/.linuxbrew/"
+  BREW_HOME="/home/linuxbrew/.linuxbrew"
 fi
 
 export PATH=$HOME/.bun/bin:$HOME/.cargo/bin:$BREW_HOME/bin:$BREW_HOME/opt/llvm/bin:$HOME/.console-ninja/.bin:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$PATH
@@ -79,3 +79,11 @@ function yy() {
 source ~/.config/broot/launcher/bash/br
 
 fastfetch
+
+# pnpm
+export PNPM_HOME="$HOME/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
