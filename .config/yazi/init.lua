@@ -21,5 +21,5 @@ Status:children_add(function(self)
 	end
 end, 3300, Status.LEFT)
 
-require("auto-layout"):setup()
+-- require("auto-layout"):setup()
 require("git"):setup()

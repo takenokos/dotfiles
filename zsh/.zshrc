@@ -17,7 +17,7 @@ else
   BREW_HOME="/home/linuxbrew/.linuxbrew"
 fi
 
-export PATH=$HOME/.bun/bin:$HOME/.cargo/bin:$BREW_HOME/bin:$BREW_HOME/opt/llvm/bin:$HOME/.console-ninja/.bin:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$PATH
+export PATH=$HOME/.local/bin:$HOME/.bun/bin:$HOME/.cargo/bin:$BREW_HOME/bin:$BREW_HOME/opt/llvm/bin:$HOME/.console-ninja/.bin:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$PATH
 
 export EDITOR=hx
 

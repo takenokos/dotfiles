@@ -26,6 +26,11 @@ command = "typos-lsp"
 [language-server.bacon]
 command = "bacon-ls"
 
+[language-server.astro-ls]
+command = "astro-ls"
+args = [ "--stdio" ]
+config = { typescript = { tsdk = "$HOME/.bun/install/global/node_modules/typescript/lib" } }
+
 # append language server to existed languages
 [[language]]
 name = "rust"
@@ -37,21 +42,6 @@ diagnostics = { enable = false }
 [[language]]
 name = "git-commit"
 language-servers = [ "scls" ]
-
-# introduce a new language to enable completion on any doc by forcing set language with :set-language stub
-[[language]]
-name = "stub"
-scope = "text.stub"
-file-types = []
-shebangs = []
-roots = []
-auto-format = false
-language-servers = [ "scls" ]
-
-[[language]]
-name = "json"
-language-servers = ["scls","vscode-json-language-server" ]
-
 
 [language-server.typescript-language-server.config]
 plugins = [{ name = "@vue/typescript-plugin", location = "$HOME/.bun/install/global/node_modules/@vue/language-server", languages = ["vue"] }]
@@ -80,3 +70,29 @@ language-servers = ["vscode-html-language-server","superhtml","emmet-lsp","scls"
 [[language]]
 name = "javascript"
 language-servers = ["typescript-language-server","scls","typos"]
+[[language]]
+name = "jsx"
+language-servers = ["typescript-language-server","tailwindcss-language-server","scls","typos"]
+[[language]]
+name = "typescript"
+language-servers = ["typescript-language-server","tailwindcss-language-server","scls","typos"]
+[[language]]
+name = "tsx"
+language-servers = ["typescript-language-server","tailwindcss-language-server","emmet-lsp","scls","typos"]
+[[language]]
+name = "css"
+language-servers = ["vscode-css-language-server","tailwindcss-language-server","scls","typos"]
+[[language]]
+name = "json"
+language-servers = ["vscode-json-language-server","scls","typos" ]
+
+[[language]]
+name = "astro"
+scope = "source.astro"
+injection-regex = "astro"
+file-types = ["astro"]
+roots = ["package.json", "astro.config.mjs"]
+language-servers = ["astro-ls","tailwindcss-language-server","scls","typos"]
+auto-format = true
+formatter = { command = "prettier", args = ["--parser", "astro"] }
+
