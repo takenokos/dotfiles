@@ -7,7 +7,7 @@
 .config/helix/languages.toml
 
 .config/yazi/theme.toml
-.confi/yazi/plugins/*
+.config/yazi/plugins/*
 
 git/*
 .config/git/catppuccin.gitconfig
