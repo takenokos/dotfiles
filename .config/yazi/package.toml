@@ -1,7 +1,7 @@
 [[plugin.deps]]
 use = "yazi-rs/plugins:git"
-rev = "a1738e8"
-hash = "e0ada736ea676c2bbb3ec705a49526ef"
+rev = "5eea960"
+hash = "e01006bfb38951ea89031bd918b20dbb"
 
 [[plugin.deps]]
 use = "josephschmitt/auto-layout"
@@ -10,13 +10,13 @@ hash = "747a700c90fffc5b187a6094fd0661b0"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:smart-filter"
-rev = "a1738e8"
-hash = "f0c4b41b5d19a3144958383333eff6e7"
+rev = "5eea960"
+hash = "f660384d7ed12ecd456efed313453310"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:vcs-files"
-rev = "a1738e8"
-hash = "36405f8781fcaf33ceab24dffd5cea19"
+rev = "5eea960"
+hash = "cc8da55f1deda45ee3787cc97b58ffc9"
 
 [flavor]
 deps = []

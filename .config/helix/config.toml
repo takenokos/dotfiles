@@ -2,7 +2,7 @@ theme = "catppuccin_macchiato"
 # theme = "my"
 
 [editor]
-#line-number = "relative"
+line-number = "relative"
 cursorline = true
 cursorcolumn = true
 true-color = true
