@@ -5,10 +5,7 @@ background-blur-radius = 10
 unfocused-split-opacity = 0.75
 macos-titlebar-style = hidden
 
-font-family = ""
 font-family = Maple Mono NF CN 
-font-family = Cascadia Code NF
-font-family = LXGW WenKai Mono GB
 font-size = 14
 font-thicken = true
 
