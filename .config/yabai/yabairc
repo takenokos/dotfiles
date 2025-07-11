@@ -9,24 +9,10 @@
 #
 yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 sudo yabai --load-sa
-# Float small, non-resizable windows
-yabai -m signal --add event=window_created action='yabai -m query --windows --window $YABAI_WINDOW_ID | jq -er ".\"can-resize\" or .\"is-floating\"" || yabai -m window $YABAI_WINDOW_ID --toggle float'
-
-yabai -m signal --add event=window_focused action="sketchybar --trigger window_focus"
-yabai -m signal --add event=display_added action="sleep 2 && $HOME/.config/yabai/create_spaces.sh"
-yabai -m signal --add event=display_removed action="sleep 1 && $HOME/.config/yabai/create_spaces.sh"
-yabai -m signal --add event=window_created action="sketchybar --trigger windows_on_spaces"
-yabai -m signal --add event=window_destroyed action="sketchybar --trigger windows_on_spaces"
-
-$HOME/.config/yabai/create_spaces.sh
-#$HOME/.config/yabai/cycle_win_focus_prev.sh
-#$HOME/.config/yabai/cycle_win_focus_next.sh
-#$HOME/.config/yabai/cycle_win_swap_prev.sh
-#$HOME/.config/yabai/cycle_win_swap_next.sh
 
 # global settings
 yabai -m config                                 \
-    external_bar                 all:30:0       \
+    external_bar                 all:25:0       \
     menubar_opacity              0.9            \
     mouse_follows_focus          on            \
     focus_follows_mouse          on            \
@@ -55,18 +41,9 @@ yabai -m config                                 \
     mouse_action2                resize         \
     mouse_drop_action            swap
 # 忽略的 app
-yabai -m rule --add label=default_float app=".*" manage=off
-# yabai -m rule --add app="^(Software Update|System Preferences|系统设置|Finder|访达|活动监视器|DeepL|Raycast|Proxifier|QQ|WeChat|微信|Telegram|Monica|Stats|CodeWhisperer|Fig|pot|LocalSend|MacZip|He3|SFM|sing-box)$" manage=off
-# yabai -m rule --add label="Finder" app="^Finder$" title="(Co(py|nnect)|Move|Info|Pref)" manage=off
-# yabai -m rule --add app="^Keka" manage=off
-
-
- yabai -m rule --add app="^(Google Chrome|Firefox|Microsoft Edge|Blisk|Arc)$" space=^1 
- yabai -m rule --add app="^(iTerm|iTerm2|Warp|Alacritty|alacritty)$" space=^2
- yabai -m rule --add app="^(QQ|WeChat|微信|Telegram|钉钉|腾讯会议)$" space=^3
- yabai -m rule --add app="^Spark$" space=^4
- yabai -m rule --add app ="^拼多多商家版$" space=^6
-# yabai -m rule --add app="^(Discord|Twitter|Maipo)$" space=^5
-# yabai -m rule --add app="^(音乐|网易云音乐|刺猬猫阅读|哔哩哔哩|Fluent Reader)$" space=^6
+yabai -m rule --add app="^(Software Update|System Preferences|System Settings|系统设置|活动监视器|DeepL|Raycast|Proxifier|Monica|Stats|pot|LocalSend|MacZip|He3|SFM|sing-box)$" manage=off
+yabai -m rule --add label="Finder" app="^Finder$" title="(Co(py|nnect)|Move|Info|Pref)" manage=off
+yabai -m rule --add label="About This Mac" app="System Information" title="About This Mac" manage=off
+yabai -m rule --add app="^Keka" manage=off
 
 echo "yabai configuration loaded.."

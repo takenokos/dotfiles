@@ -16,3 +16,5 @@ zsh/.zsh/ohmyzsh-plugins-git/*
 zsh/.zprofile
 
 .exclude*
+
+**/bin
