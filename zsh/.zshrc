@@ -27,11 +27,6 @@ source ~/.zsh/ohmyzsh-plugins-git/git.plugin.zsh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#999'
 source ~/.zsh/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
-current_theme=$(fast-theme -s 2>/dev/null)
-if [[ $current_theme != *"catppuccin-macchiato"* ]]; then
-  fast-theme XDG:catppuccin-macchiato
-fi
-
 # end plugins
 
 eval "$(fzf --zsh)"
@@ -86,6 +81,14 @@ source ~/.config/broot/launcher/bash/br
 source <(jj util completion zsh)
 
 fastfetch
+
+# fast-theme
+fsh_theme=$(fast-theme -s | sed 's/\x1b\[[0-9;]*m//g')
+main_theme=$(echo "$fsh_theme" | grep "Main theme" | awk -F': ' '{print $2}' | tr -d ' \t\r\n')
+current_active=$(echo "$fsh_theme" | grep "Currently active theme" | awk -F': ' '{print $2}' | tr -d ' \t\r\n')
+if [ "$main_theme" != "catppuccin-macchiato" ] || [ "$current_active" != "catppuccin-macchiato" ]; then
+  fast-theme XDG:catppuccin-macchiato
+fi
 
 # pnpm
 export PNPM_HOME="$HOME/.local/share/pnpm"
