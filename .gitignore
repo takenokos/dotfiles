@@ -13,7 +13,6 @@ git/*
 .config/git/catppuccin.gitconfig
 
 zsh/.zsh/ohmyzsh-plugins-git/*
-zsh/.zprofile
 
 .exclude*
 

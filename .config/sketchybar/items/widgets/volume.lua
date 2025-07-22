@@ -33,6 +33,7 @@ local volume_icon = sbar.add("item", "widgets.volume2", {
   label = {
     width = 25,
     align = "left",
+    color = colors.pink,
     font = {
       style = settings.font.style_map["Regular"],
       size = 14.0,

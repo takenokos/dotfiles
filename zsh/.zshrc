@@ -6,6 +6,8 @@ compinit
 #echo "/ __  /  __/ | | (_) | | || (_| |   <  __/ | | | (_) |   < (_) \__ \ /\_/ "
 #echo "\/ /_/ \___|_|_|\___/   \__\__,_|_|\_\___|_| |_|\___/|_|\_\___/|___/ \/ "
 
+source <(jj util completion zsh)
+
 export XDG_CONFIG_HOME="$HOME/.config"
 export ANDROID_HOME=$HOME/Library/Android/sdk
 
@@ -26,8 +28,8 @@ source ~/.zsh/git-open/git-open.plugin.zsh
 source ~/.zsh/ohmyzsh-plugins-git/git.plugin.zsh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#999'
-source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source ~/.zsh/catppuccin-zsh-syntax-highlighting/themes/catppuccin_macchiato-zsh-syntax-highlighting.zsh
+source ~/.zsh/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+fast-theme XDG:catppuccin-macchiato
 # end plugins
 
 eval "$(fzf --zsh)"
@@ -87,3 +89,12 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+# --- chsrc BLOCK BEGIN for Homebrew ---
+export HOMEBREW_API_DOMAIN="https://mirrors.sustech.edu.cn/homebrew-bottles/api"
+export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.sustech.edu.cn/homebrew-bottles"
+export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.sustech.edu.cn/git/homebrew/brew.git"
+export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.sustech.edu.cn/git/homebrew/homebrew-core.git"
+# --- chsrc BLOCK ENDIN for Homebrew ---
+export PUB_HOSTED_URL="https://mirror.nju.edu.cn/dart-pub"
+export FLUTTER_STORAGE_BASE_URL="https://mirror.sjtu.edu.cn"

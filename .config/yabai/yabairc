@@ -41,9 +41,9 @@ yabai -m config                                 \
     mouse_action2                resize         \
     mouse_drop_action            swap
 # 忽略的 app
-yabai -m rule --add app="^(Software Update|System Preferences|System Settings|系统设置|活动监视器|DeepL|Raycast|Proxifier|Monica|Stats|pot|LocalSend|MacZip|He3|SFM|sing-box)$" manage=off
+yabai -m rule --add app="^(Software Update|System Preferences|System Settings|系统设置|活动监视器|DeepL|Raycast|Proxifier|Monica|Stats|pot|LocalSend|MacZip|He3|SFM|sing-box|rednote|小红书|预览|App Store)$" manage=off
 yabai -m rule --add label="Finder" app="^Finder$" title="(Co(py|nnect)|Move|Info|Pref)" manage=off
 yabai -m rule --add label="About This Mac" app="System Information" title="About This Mac" manage=off
-yabai -m rule --add app="^Keka" manage=off
+yabai -m rule --add app="^Keka$" manage=off
 
 echo "yabai configuration loaded.."

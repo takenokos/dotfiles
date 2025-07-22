@@ -5,7 +5,7 @@
 	smudge = git-lfs smudge -- %f
 	
 [include]
-	path = ~/.config/git/./catppuccin.gitconfig
+	path = ~/.config/git/catppuccin.gitconfig
 	
 [core]
 	excludesfile = ~/.config/git/.gitignore

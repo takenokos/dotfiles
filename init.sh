@@ -38,6 +38,8 @@ git submodule update --init --recursive
 mkdir -p "zsh/.zsh/ohmyzsh-plugins-git"
 wget -O "zsh/.zsh/ohmyzsh-plugins-git/git.plugin.zsh" https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/refs/heads/master/plugins/git/git.plugin.zsh
 wget -O "zsh/.zsh/ohmyzsh-plugins-git/README.md" https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/refs/heads/master/plugins/git/README.md
+mkdir -p ".config/fsh"
+wget -O ".config/fsh/catppuccin-macchiato.ini" https://raw.githubusercontent.com/catppuccin/zsh-fsh/refs/heads/main/themes/catppuccin-macchiato.ini
 
 git_user_name=$(git config --global user.name)
 git_user_email=$(git config --global user.email)
