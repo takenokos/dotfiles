@@ -40,6 +40,7 @@ wget -O "zsh/.zsh/ohmyzsh-plugins-git/git.plugin.zsh" https://raw.githubusercont
 wget -O "zsh/.zsh/ohmyzsh-plugins-git/README.md" https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/refs/heads/master/plugins/git/README.md
 mkdir -p ".config/fsh"
 wget -O ".config/fsh/catppuccin-macchiato.ini" https://raw.githubusercontent.com/catppuccin/zsh-fsh/refs/heads/main/themes/catppuccin-macchiato.ini
+fast-theme XDG:catppuccin-mocha
 
 git_user_name=$(git config --global user.name)
 git_user_email=$(git config --global user.email)
@@ -91,8 +92,8 @@ stow --target=$HOME/.config .config
 
 bat cache --build
 
-ya pack -i
-ya pack -u
+ya pkg install
+ya pkg upgrade
 
 if [ -z "$git_user_name" ]; then
   read -p "git.user.name： " name

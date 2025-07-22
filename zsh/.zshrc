@@ -29,7 +29,6 @@ source ~/.zsh/ohmyzsh-plugins-git/git.plugin.zsh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#999'
 source ~/.zsh/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
-fast-theme XDG:catppuccin-macchiato
 # end plugins
 
 eval "$(fzf --zsh)"

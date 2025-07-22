@@ -9,6 +9,8 @@
 .config/yazi/theme.toml
 .config/yazi/plugins/*
 
+.config/fsh
+
 git/*
 .config/git/catppuccin.gitconfig
 
