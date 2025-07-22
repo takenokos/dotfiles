@@ -6,8 +6,6 @@ compinit
 #echo "/ __  /  __/ | | (_) | | || (_| |   <  __/ | | | (_) |   < (_) \__ \ /\_/ "
 #echo "\/ /_/ \___|_|_|\___/   \__\__,_|_|\_\___|_| |_|\___/|_|\_\___/|___/ \/ "
 
-source <(jj util completion zsh)
-
 export XDG_CONFIG_HOME="$HOME/.config"
 export ANDROID_HOME=$HOME/Library/Android/sdk
 
@@ -29,6 +27,11 @@ source ~/.zsh/ohmyzsh-plugins-git/git.plugin.zsh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#999'
 source ~/.zsh/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+current_theme=$(fast-theme -s 2>/dev/null)
+if [[ $current_theme != *"catppuccin-macchiato"* ]]; then
+  fast-theme XDG:catppuccin-macchiato
+fi
+
 # end plugins
 
 eval "$(fzf --zsh)"
@@ -78,6 +81,9 @@ function yy() {
 
 # broot
 source ~/.config/broot/launcher/bash/br
+
+# jj
+source <(jj util completion zsh)
 
 fastfetch
 
