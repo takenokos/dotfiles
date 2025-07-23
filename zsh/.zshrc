@@ -98,11 +98,5 @@ case ":$PATH:" in
 esac
 # pnpm end
 
-# --- chsrc BLOCK BEGIN for Homebrew ---
-export HOMEBREW_API_DOMAIN="https://mirrors.sustech.edu.cn/homebrew-bottles/api"
-export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.sustech.edu.cn/homebrew-bottles"
-export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.sustech.edu.cn/git/homebrew/brew.git"
-export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.sustech.edu.cn/git/homebrew/homebrew-core.git"
-# --- chsrc BLOCK ENDIN for Homebrew ---
 export PUB_HOSTED_URL="https://mirror.nju.edu.cn/dart-pub"
 export FLUTTER_STORAGE_BASE_URL="https://mirror.sjtu.edu.cn"
