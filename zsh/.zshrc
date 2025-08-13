@@ -74,9 +74,6 @@ function yy() {
 }
 # end yazi
 
-# broot
-source ~/.config/broot/launcher/bash/br
-
 # jj
 source <(jj util completion zsh)
 
