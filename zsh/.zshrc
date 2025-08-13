@@ -58,10 +58,6 @@ alias hitokoto="curl -sL https://v1.hitokoto.cn/\?encode\=json | jq '.hitokoto'"
 alias python=python3
 alias py=python
 alias py3=python3
-# ngrok
-if command -v ngrok &>/dev/null; then
-    eval "$(ngrok completion)"
-fi
 
 # yazi
 function yy() {
