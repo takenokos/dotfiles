@@ -135,7 +135,7 @@
     },
     "format": "<span color=\"#a6da95\" font=\"Font Awesome 6 Free\">{icon}</span> {capacity}%",
     "format-full": "<span color=\"#a6da95\" font=\"Font Awesome 6 Free\">{icon}</span> {capacity}%",
-    "format-charging": "<span color=\"#a6da95\" font=\"Font Awesome 6 Free\"></span> {capacity}% ",
+    "format-charging": "<span color=\"#a6da95\" font=\"Font Awesome 6 Free\"></span> {capacity}%",
     "format-plugged": "<span color=\"#a6da95\" font=\"Font Awesome 6 Free\"></span> {capacity}%",
     "format-alt": "<span color=\"#a6da95\" font=\"Font Awesome 6 Free\">{icon}</span> {time}",
     // "format-good": "", // An empty format will hide the module
@@ -165,9 +165,9 @@
   "network": {
     // "interface": "wlp2*", // (Optional) To force the use of this interface
     "format-wifi": "<span color=\"#8bd5ca\" font=\"Font Awesome 6 Free\"></span> {essid} ({signalStrength}%)",
-    "format-ethernet": "{ipaddr}/{cidr} ",
-    "tooltip-format": "{ifname} via {gwaddr} ",
-    "format-linked": "{ifname} (No IP) ",
+    "format-ethernet": "<span color=\"#8bd5ca\" font=\"Font Awesome 6 Free\"></span> {ipaddr}/{cidr}",
+    "tooltip-format": "<span color=\"#8bd5ca\" font=\"Font Awesome 6 Free\"></span>{ ifname} via {gwaddr}",
+    "format-linked": "<span color=\"#8bd5ca\" font=\"Font Awesome 6 Free\"></span> {ifname} (No IP)",
     "format-disconnected": "<span color=\"#ed8796\" font=\"Font Awesome 6 Free\">⚠</span> Disconnected",
     "format-alt": "{ifname}: {ipaddr}/{cidr}"
   },
