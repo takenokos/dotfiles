@@ -91,5 +91,4 @@ case ":$PATH:" in
 esac
 # pnpm end
 
-export PUB_HOSTED_URL="https://mirror.nju.edu.cn/dart-pub"
-export FLUTTER_STORAGE_BASE_URL="https://mirror.sjtu.edu.cn"
+source ~/.config/broot/launcher/bash/br

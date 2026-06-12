@@ -1,6 +1,7 @@
-term = xterm-256color
-theme = catppuccin-macchiato.conf
-background-opacity = 0.75
+custom-shader = ~/.config/ghostty/shaders/shader.glsl
+
+theme = Catppuccin Macchiato
+background-opacity = 1.00
 background-blur-radius = 10
 unfocused-split-opacity = 0.75
 macos-titlebar-style = hidden
@@ -19,7 +20,7 @@ confirm-close-surface = false
 quit-after-last-window-closed = true
 
 # shell-integration = zsh
-shell-integration-features = no-cursor,sudo,title
+shell-integration-features = no-cursor,sudo,title,ssh-terminfo,ssh-env
 
 #zellij alt bug
 macos-option-as-alt=true
