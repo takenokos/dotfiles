@@ -11,22 +11,17 @@
       url = "github:crisidev/bacon-ls";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    zig2nix = {
-      url = "github:Cloudef/zig2nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     nullclaw = {
       url = "github:nullclaw/nullclaw";
-      inputs.zig2nix.follows = "zig2nix";
     };
-    opencode = {
-      url = "github:anomalyco/opencode";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    openspec = {
-      url = "github:Fission-AI/OpenSpec";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # opencode = {
+    #   url = "github:anomalyco/opencode";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
+    # openspec = {
+    #   url = "github:Fission-AI/OpenSpec";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
     llm-agents = {
       url = "github:numtide/llm-agents.nix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -35,6 +30,10 @@
     #   url = "github:jdx/mise";
     #   inputs.nixpkgs.follows = "nixpkgs";
     # };
+    purple = {
+      url = "github:erickochen/purple";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
   nixConfig = {
     extra-substituters = [ "https://cache.numtide.com" ];
@@ -47,12 +46,12 @@
       nixpkgs,
       # bacon,
       bacon-ls,
-      zig2nix,
       nullclaw,
-      opencode,
-      openspec,
+      # opencode,
+      # openspec,
       llm-agents,
       # mise,
+      purple,
     }:
     let
       system = "x86_64-linux"; # 根据你的系统调整
@@ -73,6 +72,7 @@
             atuin
             bat
             bottom
+            broot
             brush
             chsrc
             delta
@@ -99,12 +99,12 @@
             p7zip
             poppler
             procs
+            purple.packages.${system}.default
             resvg
             ripgrep
             starship
             stow
             termusic
-	    termscp
             wget
             yazi
             zellij
@@ -112,21 +112,21 @@
           ];
         };
         net= pkgs.buildEnv {
-          name = "net ";
+          name = "net";
           paths = with pkgs; [
             sing-box
             mihomo
             clashtui
-     #        netbird
-	    # tailscale
-	    # zerotierone
+            # netbird
+	          # tailscale
+	          # zerotierone
           ];
         };
 
         ai = pkgs.buildEnv {
           name = "ai";
           paths = [
-            # nullclaw.packages.${system}.default
+            nullclaw.packages.${system}.default
             # opencode.packages.${system}.default // llm-agents可以使用cachix预构建
             # openspec.packages.${system}.default
             llm-agents.packages.${system}.rtk
@@ -135,14 +135,13 @@
             llm-agents.packages.${system}.claw-code
             llm-agents.packages.${system}.codex
             llm-agents.packages.${system}.copilot-cli
-            # llm-agents.packages.${system}.gemini-cli // sunset replace by antigravity
             llm-agents.packages.${system}.opencode
             llm-agents.packages.${system}.openspec
           ];
         };
 
         lsp = pkgs.buildEnv {
-          name = "lsp ";
+          name = "lsp";
           paths = with pkgs; [
             astro-language-server
             bacon

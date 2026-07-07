@@ -10,6 +10,8 @@ bufferline = "multiple"
 color-modes = true
 end-of-line-diagnostics = "hint" #内联诊断
 
+[editor.search]
+smart-case = false
 [editor.cursor-shape]
 insert = "bar"
 #normal = "block"
