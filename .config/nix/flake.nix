@@ -143,17 +143,19 @@
         lsp = pkgs.buildEnv {
           name = "lsp";
           paths = with pkgs; [
-            astro-language-server
-            bacon
-            bacon-ls
-            emmet-language-server
-            nil
+            astro-language-server # astrojs
+            bacon # rust 轻量
+            bacon-ls # rust 轻量
+            emmet-language-server # html
+            markdown-oxide
+            nil # nix
+            omnisharp-roslyn # dotnet
             rust-analyzer
-            simple-completion-language-server
+            simple-completion-language-server # 通用
             superhtml
-            typos-lsp
+            typos-lsp # 语法检查
             tailwindcss-language-server
-            taplo
+            taplo # toml
             typescript-language-server
             vscode-langservers-extracted
             vue-language-server

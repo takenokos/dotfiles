@@ -36,30 +36,30 @@ fi
 git submodule update --init --recursive
 
 mkdir -p "zsh/.zsh/ohmyzsh-plugins-git"
-wget -O "zsh/.zsh/ohmyzsh-plugins-git/git.plugin.zsh" https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/refs/heads/master/plugins/git/git.plugin.zsh
-wget -O "zsh/.zsh/ohmyzsh-plugins-git/README.md" https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/refs/heads/master/plugins/git/README.md
+wget -O "zsh/.zsh/ohmyzsh-plugins-git/git.plugin.zsh" https://ghproxy.net/raw.githubusercontent.com/ohmyzsh/ohmyzsh/refs/heads/master/plugins/git/git.plugin.zsh --no-check-certificate
+wget -O "zsh/.zsh/ohmyzsh-plugins-git/README.md" https://ghproxy.net/raw.githubusercontent.com/ohmyzsh/ohmyzsh/refs/heads/master/plugins/git/README.md --no-check-certificate
 mkdir -p ".config/fsh"
-wget -O ".config/fsh/catppuccin-macchiato.ini" https://raw.githubusercontent.com/catppuccin/zsh-fsh/refs/heads/main/themes/catppuccin-macchiato.ini
+wget -O ".config/fsh/catppuccin-macchiato.ini" https://ghproxy.net/raw.githubusercontent.com/catppuccin/zsh-fsh/refs/heads/main/themes/catppuccin-macchiato.ini --no-check-certificate
 
 git_user_name=$(git config --global user.name)
 git_user_email=$(git config --global user.email)
 mkdir -p ".config/git"
 mkdir -p "git"
-wget -O ".config/git/catppuccin.gitconfig" https://raw.githubusercontent.com/catppuccin/delta/refs/heads/main/catppuccin.gitconfig
+wget -O ".config/git/catppuccin.gitconfig" https://ghproxy.net/raw.githubusercontent.com/catppuccin/delta/refs/heads/main/catppuccin.gitconfig --no-check-certificate
 cp ".config/git/.gitconfig" "git/.gitconfig"
 
 mkdir -p ".config/bat/themes"
-wget -O ".config/bat/themes/Catppuccin Macchiato.tmTheme" https://github.com/catppuccin/bat/raw/main/themes/Catppuccin%20Macchiato.tmTheme
+wget -O ".config/bat/themes/Catppuccin Macchiato.tmTheme" https://ghproxy.net/github.com/catppuccin/bat/raw/main/themes/Catppuccin%20Macchiato.tmTheme --no-check-certificate
 
 mkdir -p ".config/bottom"
-wget -O ".config/bottom/macchiato.toml" https://raw.githubusercontent.com/catppuccin/bottom/refs/heads/main/themes/macchiato.toml
+wget -O ".config/bottom/macchiato.toml" https://ghproxy.net/raw.githubusercontent.com/catppuccin/bottom/refs/heads/main/themes/macchiato.toml --no-check-certificate
 
 mkdir -p ".config/gitui"
-wget -O ".config/gitui/theme.ron" https://raw.githubusercontent.com/catppuccin/gitui/refs/heads/main/themes/catppuccin-macchiato.ron
+wget -O ".config/gitui/theme.ron" https://ghproxy.net/raw.githubusercontent.com/catppuccin/gitui/refs/heads/main/themes/catppuccin-macchiato.ron --no-check-certificate
 
 echo "yazi"
 mkdir -p ".config/yazi"
-wget -O ".config/yazi/theme.toml" https://raw.githubusercontent.com/catppuccin/yazi/refs/heads/main/themes/macchiato/catppuccin-macchiato-blue.toml
+wget -O ".config/yazi/theme.toml" https://ghproxy.net/raw.githubusercontent.com/catppuccin/yazi/refs/heads/main/themes/macchiato/catppuccin-macchiato-lavender.toml --no-check-certificate
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
   # Mac
