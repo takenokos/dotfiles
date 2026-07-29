@@ -45,7 +45,7 @@ fi
 
 #alias
 alias cd=z
-alias ls="eza --icons=always --hyperlink"
+alias ls="eza --icons=always --hyperlink=auto"
 
 alias find=fd
 alias grep=rg
@@ -84,10 +84,10 @@ if [ "$main_theme" != "catppuccin-macchiato" ] || [ "$current_active" != "catppu
 fi
 
 # pnpm
-export PNPM_HOME="$HOME/.local/share/pnpm"
+export PNPM_HOME="/home/qqs/.local/share/pnpm"
 case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
+  *":$PNPM_HOME/bin:"*) ;;
+  *) export PATH="$PNPM_HOME/bin:$PATH" ;;
 esac
 # pnpm end
 

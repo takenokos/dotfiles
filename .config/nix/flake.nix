@@ -11,9 +11,10 @@
       url = "github:crisidev/bacon-ls";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nullclaw = {
-      url = "github:nullclaw/nullclaw";
-    };
+    # nullclaw = {
+    #   url = "github:nullclaw/nullclaw";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
     # opencode = {
     #   url = "github:anomalyco/opencode";
     #   inputs.nixpkgs.follows = "nixpkgs";
@@ -36,8 +37,8 @@
     };
   };
   nixConfig = {
-    extra-substituters = [ "https://cache.numtide.com" ];
-    extra-trusted-public-keys = [ "niks3.numtide.com-1:DTx8wZduET09hRmMtKdQDxNNthLQETkc/yaX7M4qK0g=" ];
+    extra-substituters = ["https://nix-community.cachix.org" "https://cache.numtide.com" ];
+    extra-trusted-public-keys = ["nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs=" "niks3.numtide.com-1:DTx8wZduET09hRmMtKdQDxNNthLQETkc/yaX7M4qK0g=" ];
   };
 
   outputs =
@@ -46,7 +47,7 @@
       nixpkgs,
       # bacon,
       bacon-ls,
-      nullclaw,
+      # nullclaw,
       # opencode,
       # openspec,
       llm-agents,
@@ -126,7 +127,7 @@
         ai = pkgs.buildEnv {
           name = "ai";
           paths = [
-            nullclaw.packages.${system}.default
+            # nullclaw.packages.${system}.default // 考虑使用podman容器
             # opencode.packages.${system}.default // llm-agents可以使用cachix预构建
             # openspec.packages.${system}.default
             llm-agents.packages.${system}.rtk
