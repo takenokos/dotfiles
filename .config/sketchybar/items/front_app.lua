@@ -3,7 +3,7 @@ local settings = require("settings")
 local app_icons = require("helpers.app_icons")
 
 local front_app = sbar.add("item", "front_app", {
-  position = "center",
+  position = "left",
   display = "active",
   icon = {
     drawing = true,
@@ -44,6 +44,29 @@ front_app:subscribe("front_app_switched", function(env)
         y_offset = 0
       })
     end)
+  end)
+end)
+
+front_app:subscribe("swap_menus_and_spaces", function(env)
+end)
+
+front_app:subscribe("mouse.entered", function(env)
+  sbar.animate("sin", 10, function()
+    front_app:set({
+      background = {
+        color = colors.with_alpha(colors.mauve, 0.75),
+      },
+    })
+  end)
+end)
+
+front_app:subscribe("mouse.exited", function(env)
+  sbar.animate("sin", 10, function()
+    front_app:set({
+      background = {
+        color = colors.bg1,
+      },
+    })
   end)
 end)
 
