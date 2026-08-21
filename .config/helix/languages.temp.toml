@@ -3,12 +3,12 @@
 command = "simple-completion-language-server"
 
 [language-server.scls.config]
-max_completion_items = 20     # set max completion results len for each group: words, snippets, unicode-input
-snippets_first = true         # completions will return before snippets by default
-feature_words = true          # enable completion by word
-feature_snippets = true       # enable snippets
+max_completion_items = 20  # set max completion results len for each group: words, snippets, unicode-input
+snippets_first = true  # completions will return before snippets by default
+feature_words = true  # enable completion by word
+feature_snippets = true  # enable snippets
 feature_unicode_input = true  # enable "unicode input"
-feature_paths = true          # enable path completion
+feature_paths = true  # enable path completion
 feature_citations = true
 
 # write logs to /tmp/completion.log
@@ -16,8 +16,13 @@ feature_citations = true
 RUST_LOG = "info,simple-completion-language-server=info"
 LOG_FILE = "/tmp/completion.log"
 
+# 不知道为啥这样一写就能生效
+# 改用tombi了,配置保留
+[language-server.taplo]
+config = {}
+
 [language-server.emmet-lsp]
-command="emmet-language-server"
+command = "emmet-language-server"
 args = ["--stdio"]
 
 [language-server.typos]
@@ -26,65 +31,115 @@ command = "typos-lsp"
 [language-server.bacon]
 command = "bacon-ls"
 
-[language-server.astro-ls]
-command = "astro-ls"
-args = [ "--stdio" ]
-config = { typescript = { tsdk = "$HOME/.bun/install/global/node_modules/typescript/lib" } }
-
-# append language server to existed languages
-[[language]]
-name = "rust"
-language-servers = ["scls","rust-analyzer","bacon","typos"]
 [language-server.rust-analyzer.config]
 checkOnSave = { enable = false }
 diagnostics = { enable = false }
 
-[[language]]
-name = "git-commit"
-language-servers = [ "scls" ]
-
 [language-server.typescript-language-server.config]
-plugins = [{ name = "@vue/typescript-plugin", location = "$HOME/.bun/install/global/node_modules/@vue/language-server", languages = ["vue"] }]
+plugins = [
+  { name = "@vue/typescript-plugin", location = "$HOME/.bun/install/global/node_modules/@vue/language-server", languages = [
+    "vue",
+  ] },
+]
 
 [language-server.volar]
 command = "vue-language-server"
 args = ["--stdio"]
 
 [language-server.volar.config]
-#vue = { hybridMode = false }
+# vue = { hybridMode = false }
 typescript = { tsdk = "$HOME/.bun/install/global/node_modules/typescript/lib" }
 
 [language-server.tailwindcss-language-server]
 command = "tailwindcss-language-server"
 args = ["--stdio"]
 
+[language-server.astro-ls]
+command = "astro-ls"
+args = ["--stdio"]
+config = { typescript = { tsdk = "$HOME/.bun/install/global/node_modules/typescript/lib" } }
+
+[language-server.csharp-ls]
+command = "csharp-ls"
+
+[language-server.roslyn-language-server]
+command = "roslyn-language-server"
+args = ["--stdio", "--autoLoadProjects"]
+
+# append language server to existed languages
+[[language]]
+name = "rust"
+language-servers = ["scls", "rust-analyzer", "bacon", "typos"]
+
+[[language]]
+name = "git-commit"
+language-servers = ["scls"]
+
 [[language]]
 name = "vue"
 auto-format = true
-language-servers = ["volar","typescript-language-server","tailwindcss-language-server","scls","typos"]
+language-servers = [
+  "volar",
+  "typescript-language-server",
+  "tailwindcss-language-server",
+  "scls",
+  "typos",
+]
 
 [[language]]
 name = "html"
-language-servers = ["vscode-html-language-server","superhtml","emmet-lsp","scls","typos"]
+language-servers = [
+  "vscode-html-language-server",
+  "superhtml",
+  "emmet-lsp",
+  "scls",
+  "typos",
+]
 
 [[language]]
 name = "javascript"
-language-servers = ["typescript-language-server","scls","typos"]
+language-servers = ["typescript-language-server", "scls", "typos"]
+
 [[language]]
 name = "jsx"
-language-servers = ["typescript-language-server","tailwindcss-language-server","scls","typos"]
+language-servers = [
+  "typescript-language-server",
+  "tailwindcss-language-server",
+  "scls",
+  "typos",
+]
+
 [[language]]
 name = "typescript"
-language-servers = ["typescript-language-server","tailwindcss-language-server","scls","typos"]
+language-servers = [
+  "typescript-language-server",
+  "tailwindcss-language-server",
+  "scls",
+  "typos",
+]
+
 [[language]]
 name = "tsx"
-language-servers = ["typescript-language-server","tailwindcss-language-server","emmet-lsp","scls","typos"]
+language-servers = [
+  "typescript-language-server",
+  "tailwindcss-language-server",
+  "emmet-lsp",
+  "scls",
+  "typos",
+]
+
 [[language]]
 name = "css"
-language-servers = ["vscode-css-language-server","tailwindcss-language-server","scls","typos"]
+language-servers = [
+  "vscode-css-language-server",
+  "tailwindcss-language-server",
+  "scls",
+  "typos",
+]
+
 [[language]]
 name = "json"
-language-servers = ["vscode-json-language-server","scls","typos" ]
+language-servers = ["vscode-json-language-server", "scls", "typos"]
 
 [[language]]
 name = "astro"
@@ -92,7 +147,12 @@ scope = "source.astro"
 injection-regex = "astro"
 file-types = ["astro"]
 roots = ["package.json", "astro.config.mjs"]
-language-servers = ["astro-ls","tailwindcss-language-server","scls","typos"]
+language-servers = ["astro-ls", "tailwindcss-language-server", "scls", "typos"]
 auto-format = true
 formatter = { command = "prettier", args = ["--parser", "astro"] }
 
+[[language]]
+name = "c-sharp"
+file-types = ["cs", "csx", "cake", "cshtml"]
+# language-servers = [ "roslyn-language-server", "csharp-ls","scls","typos" ]
+language-servers = ["csharp-ls", "scls", "typos"]

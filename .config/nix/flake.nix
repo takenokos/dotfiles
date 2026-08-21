@@ -147,16 +147,18 @@
             astro-language-server # astrojs
             bacon # rust 轻量
             bacon-ls # rust 轻量
+            csharp-ls # c# dotnet 轻量
             emmet-language-server # html
             markdown-oxide
             nil # nix
-            omnisharp-roslyn # dotnet
+            # omnisharp-roslyn # dotnet
             rust-analyzer
             simple-completion-language-server # 通用
             superhtml
             typos-lsp # 语法检查
             tailwindcss-language-server
-            taplo # toml
+            # taplo # toml 更传统
+            tombi# toml 更现代
             typescript-language-server
             vscode-langservers-extracted
             vue-language-server
