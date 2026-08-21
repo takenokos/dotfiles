@@ -95,23 +95,6 @@ local space_window_observer = sbar.add("item", {
   updates = true,
 })
 
-local spaces_indicator = sbar.add("item", {
-  icon = {
-    padding_left = 8,
-    color = colors.mauve,
-    string = icons.switch.on,
-  },
-  label = {
-    width = 0,
-    padding_right = 8,
-    string = "Menu",
-    color = colors.black,
-  },
-  background = {
-    color = colors.with_alpha(colors.mauve, 0.0),
-  }
-})
-
 space_window_observer:subscribe("space_windows_change", function(env)
   local icon_line = ""
   local no_app = true
@@ -128,40 +111,4 @@ space_window_observer:subscribe("space_windows_change", function(env)
   sbar.animate("sin", 10, function()
     spaces[env.INFO.space]:set({ label = icon_line })
   end)
-end)
-
-spaces_indicator:subscribe("swap_menus_and_spaces", function(env)
-  local currently_on = spaces_indicator:query().icon.value == icons.switch.on
-  spaces_indicator:set({
-    icon = currently_on and icons.switch.off or icons.switch.on,
-    label = currently_on and "Spaces" or "Menu"
-  })
-end)
-
-spaces_indicator:subscribe("mouse.entered", function(env)
-  sbar.animate("sin", 10, function()
-    spaces_indicator:set({
-      background = {
-        color = { alpha = 1.0 },
-      },
-      icon = { color = colors.black },
-      label = { width = "dynamic" }
-    })
-  end)
-end)
-
-spaces_indicator:subscribe("mouse.exited", function(env)
-  sbar.animate("sin", 10, function()
-    spaces_indicator:set({
-      background = {
-        color = { alpha = 0.0 },
-      },
-      icon = { color = colors.mauve},
-      label = { width = 0, }
-    })
-  end)
-end)
-
-spaces_indicator:subscribe("mouse.clicked", function(env)
-  sbar.trigger("swap_menus_and_spaces")
 end)
