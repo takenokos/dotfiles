@@ -149,9 +149,10 @@
             bacon-ls # rust 轻量
             csharp-ls # c# dotnet 轻量
             emmet-language-server # html
+            lemminx # xml
             markdown-oxide
             nil # nix
-            # omnisharp-roslyn # dotnet
+            roslyn-ls # c# 官方
             rust-analyzer
             simple-completion-language-server # 通用
             superhtml

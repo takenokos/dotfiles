@@ -63,8 +63,17 @@ config = { typescript = { tsdk = "$HOME/.bun/install/global/node_modules/typescr
 command = "csharp-ls"
 
 [language-server.roslyn-language-server]
-command = "roslyn-language-server"
-args = ["--stdio", "--autoLoadProjects"]
+command = "Microsoft.CodeAnalysis.LanguageServer"
+args = ["--stdio"]
+
+# args = ["--stdio", "--autoLoadProjects"]
+[language-server.lemminx]
+command = "lemminx"
+
+[[language]]
+name = "xml"
+language-servers = ["lemminx"]
+# auto-format = true
 
 # append language server to existed languages
 [[language]]
@@ -156,3 +165,7 @@ name = "c-sharp"
 file-types = ["cs", "csx", "cake", "cshtml"]
 # language-servers = [ "roslyn-language-server", "csharp-ls","scls","typos" ]
 language-servers = ["csharp-ls", "scls", "typos"]
+
+[[grammar]]
+name = "razor"
+source = { git = "https://github.com/tris203/tree-sitter-razor", rev = "main" }
