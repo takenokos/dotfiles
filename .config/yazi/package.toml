@@ -19,11 +19,6 @@ rev = "58c4f4e"
 hash = "f281261ff04ad7ec867c3f802a50835f"
 
 [[flavor.deps]]
-use = "dangooddd/kanagawa"
-rev = "04985d1"
-hash = "c69a63981e254a3a06a11c2bf0e6af1d"
-
-[[flavor.deps]]
-use = "marcosvnmelo/kanagawa-dragon"
-rev = "b433f4a"
-hash = "b967c24a30350b1c5cd3a2ad5a7732e7"
+use = "melindachang/kanagawa-paper"
+rev = "7f3cd1d"
+hash = "3f84eceb475a9d1c1ea911d93a1d1898"
