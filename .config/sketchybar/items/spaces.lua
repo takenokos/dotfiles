@@ -6,20 +6,20 @@ local app_icons = require("helpers.app_icons")
 local spaces = {}
 local names={}
 local highlight_colors = {
-  0xfff4dbd6,
-  0xfff0c6c6,
-  0xfff5bde6,
-  0xffc6a0f6,
-  0xffed8796,
-  0xffee99a0,
-  0xfff5a97f,
-  0xffeed49f,
-  0xffa6da95,
-  0xff8bd5ca,
-  0xff91d7e3,
-  0xff7dc4e4,
-  0xff8aadf4,
-  0xffb7bdf8
+  0xffffa066,
+  0xffc8c093,
+  0xffd27e99,
+  0xff957fb8,
+  0xffe46876,
+  0xffff5d62,
+  0xffe6c384,
+  0xff98bb6c,
+  0xff7aa89f,
+  0xffa3d4d5,
+  0xff658594,
+  0xff7e9cd8,
+  0xffb8b4d0,
+  0xff727169
 }
 
 for i = 1, 10, 1 do
