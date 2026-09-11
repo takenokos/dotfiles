@@ -187,3 +187,95 @@
 #regex = true
 #case_sensitive = false
 #whole_word = false
+
+# catppuccin macchiato 
+# [styles.cpu]
+# all_entry_color = "#f4dbd6"
+# avg_entry_color = "#ee99a0"
+# cpu_core_colors = ["#ed8796","#f5a97f","#eed49f","#a6da95","#7dc4e4","#c6a0f6"]
+# [styles.memory]
+# ram_color = "#a6da95"
+# cache_color = "#ed8796"
+# swap_color = "#f5a97f"
+# gpu_colors = ["#7dc4e4","#c6a0f6","#ed8796","#f5a97f","#eed49f","#a6da95"]
+# arc_color = "#91d7e3"
+# [styles.network]
+# rx_color = "#a6da95"
+# tx_color = "#ed8796"
+# rx_total_color = "#91d7e3"
+# tx_total_color = "#a6da95"
+# [styles.battery]
+# high_battery_color = "#a6da95"
+# medium_battery_color = "#eed49f"
+# low_battery_color = "#ed8796"
+# [styles.tables]
+# headers = {color = "#f4dbd6"}
+# [styles.graphs]
+# graph_color = "#a5adcb"
+# legend_text = {color = "#a5adcb"}
+# [styles.widgets]
+# border_color = "#5b6078"
+# selected_border_color = "#f5bde6"
+# widget_title = {color = "#f0c6c6"}
+# text = {color = "#cad3f5"}
+# selected_text = {color = "#181926", bg_color = "#c6a0f6"}
+# disabled_text = {color = "#24273a"}
+
+# kanagawa
+[styles.cpu]
+all_entry_color = "#DCD7BA" # fuji_white
+avg_entry_color = "#C8C093" # old_white
+cpu_core_colors = [
+    "#7E9CD8", # crystal_blue
+    "#98BB6C", # spring_green
+    "#E6C384", # carp_yellow
+    "#D27E99", # sakura_pink
+    "#7FB4CA", # spring_blue
+    "#957FB8", # oni_violet
+    "#FFA066", # surimi_orange
+    "#6A9589", # wave_aqua_1
+    "#B8B4D0", # oni_violet_2
+    "#C0A36E", # boat_yellow_2
+    "#E46876", # wave_red
+    "#9CABCA", # spring_violet_2
+]
+
+[styles.memory]
+ram_color = "#98BB6C"       # spring_green
+cache_color = "#7E9CD8"     # crystal_blue
+swap_color = "#FFA066"      # surimi_orange
+gpu_colors = [
+    "#7E9CD8", # crystal_blue
+    "#957FB8", # oni_violet
+    "#E6C384", # carp_yellow
+    "#98BB6C", # spring_green
+    "#D27E99", # sakura_pink
+    "#7FB4CA", # spring_blue
+]
+arc_color = "#7FB4CA"       # spring_blue
+
+[styles.network]
+rx_color = "#98BB6C"        # spring_green
+tx_color = "#7E9CD8"        # crystal_blue
+rx_total_color = "#7FB4CA"  # spring_blue
+tx_total_color = "#957FB8"  # oni_violet
+
+[styles.battery]
+high_battery_color = "#98BB6C"   # spring_green
+medium_battery_color = "#E6C384" # carp_yellow
+low_battery_color = "#E82424"    # samurai_red
+
+[styles.tables]
+headers = {color = "#DCD7BA"} # fuji_white
+
+[styles.graphs]
+graph_color = "#727169" # fuji_gray
+legend_text = {color = "#C8C093"} # old_white
+
+[styles.widgets]
+border_color = "#54546D"          # sumi_ink_6
+selected_border_color = "#7E9CD8" # crystal_blue
+widget_title = {color = "#C8C093"} # old_white
+text = {color = "#DCD7BA"}         # fuji_white
+selected_text = {color = "#1F1F28", bg_color = "#957FB8"} # sumi_ink_3 on oni_violet
+disabled_text = {color = "#727169"} # fuji_gray

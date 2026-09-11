@@ -5,7 +5,7 @@
 	smudge = git-lfs smudge -- %f
 	
 [include]
-	path = ~/.config/git/catppuccin.gitconfig
+	path = ~/.config/git/kanagawa.gitconfig
 	
 [core]
 	excludesfile = ~/.config/git/.gitignore
@@ -16,7 +16,7 @@
 	diffFilter = delta --color-only
 	
 [delta]
-	features = catppuccin-macchiato
+	features = kanagawa-wave
 	navigate = true    # use n and N to move between diff sections
 	side-by-side = true
 	line-numbers = true

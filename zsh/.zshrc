@@ -79,8 +79,8 @@ fastfetch
 fsh_theme=$(fast-theme -s | sed 's/\x1b\[[0-9;]*m//g')
 main_theme=$(echo "$fsh_theme" | grep "Main theme" | awk -F': ' '{print $2}' | tr -d ' \t\r\n')
 current_active=$(echo "$fsh_theme" | grep "Currently active theme" | awk -F': ' '{print $2}' | tr -d ' \t\r\n')
-if [ "$main_theme" != "catppuccin-macchiato" ] || [ "$current_active" != "catppuccin-macchiato" ]; then
-  fast-theme XDG:catppuccin-macchiato
+if [ "$main_theme" != "kanagawa" ] || [ "$current_active" != "kanagawa" ]; then
+  fast-theme XDG:kanagawa
 fi
 
 # pnpm

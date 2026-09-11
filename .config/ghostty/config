@@ -2,7 +2,8 @@ custom-shader = ~/.config/ghostty/shaders/shader.glsl
 
 term = xterm-256color
 
-theme = Catppuccin Macchiato
+# theme = Catppuccin Macchiato
+theme = Kanagawabones
 background-opacity = 1.00
 background-blur-radius = 10
 unfocused-split-opacity = 0.75

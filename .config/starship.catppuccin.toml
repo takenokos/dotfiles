@@ -1,11 +1,10 @@
-# Get editor completions based on the config.txt
 # Get editor completions based on the config schema
 #"$schema" = 'https://starship.rs/config-schema.json'
 
 # version: 1.0.0
 
 #add_newline = true
-continuation_prompt = "[▸▹ ](dimmed fuji_white)"
+continuation_prompt = "[▸▹ ](dimmed white)"
 
 format = """$os\
 $username\
@@ -91,54 +90,41 @@ $time\
 \n\
 $character"""
 
-palette = 'kanagawa'
 
-[palettes.kanagawa]
-sumi_ink_0 = "#16161D"
-sumi_ink_1 = "#181820"
-sumi_ink_2 = "#1a1a22"
-sumi_ink_3 = "#1F1F28"
-sumi_ink_4 = "#2A2A37"
-sumi_ink_5 = "#363646"
-sumi_ink_6 = "#54546D"
-wave_blue_1 = "#223249"
-wave_blue_2 = "#2D4F67"
-winter_green = "#2B3328"
-winter_yellow = "#49443C"
-winter_red = "#43242B"
-winter_red_2 = "#25221B"
-fuji_white = "#DCD7BA"
-old_white = "#C8C093"
-fuji_gray = "#727169"
-oni_violet = "#957FB8"
-oni_violet_2 = "#B8B4D0"
-crystal_blue = "#7E9CD8"
-spring_blue = "#7FB4CA"
-spring_violet_1 = "#938AA9"
-spring_violet_2 = "#9CABCA"
-wave_aqua_1 = "#6A9589"
-wave_aqua_2 = "#7AA89F"
-spring_green = "#98BB6C"
-carp_yellow = "#E6C384"
-sakura_pink = "#D27E99"
-wave_red = "#E46876"
-peach_red = "#FF5D62"
-surimi_orange = "#FFA066"
-ronin_yellow = "#FF9E3B"
-samurai_red = "#E82424"
-autumn_green = "#76946A"
-autumn_red = "#C34043"
-autumn_yellow = "#DCA561"
-katana_gray = "#717C7C"
-dragon_gray = "#A6A69C"
-dragon_gray_2 = "#9E9B93"
-dragon_gray_3 = "#7A8382"
-boat_yellow_1 = "#938056"
-boat_yellow_2 = "#C0A36E"
+
+palette = 'catppuccin_macchiato'
+
+[palettes.catppuccin_macchiato]
+rosewater = "#f4dbd6"
+flamingo = "#f0c6c6"
+pink = "#f5bde6"
+mauve = "#c6a0f6"
+red = "#ed8796"
+maroon = "#ee99a0"
+peach = "#f5a97f"
+yellow = "#eed49f"
+green = "#a6da95"
+teal = "#8bd5ca"
+sky = "#91d7e3"
+sapphire = "#7dc4e4"
+blue = "#8aadf4"
+lavender = "#b7bdf8"
+text = "#cad3f5"
+subtext1 = "#b8c0e0"
+subtext0 = "#a5adcb"
+overlay2 = "#939ab7"
+overlay1 = "#8087a2"
+overlay0 = "#6e738d"
+surface2 = "#5b6078"
+surface1 = "#494d64"
+surface0 = "#363a4f"
+base = "#24273a"
+mantle = "#1e2030"
+crust = "#181926"
 
 [os]
 disabled = false
-format = "[$symbol](fuji_white bold italic)"
+format = "[$symbol](rosewater bold italic)"
 
 [os.symbols]
 Windows = "󰍲"
@@ -167,9 +153,9 @@ symbol = ' '
 
 [character]
 format = "$symbol "
-success_symbol = "[❯](bold italic spring_green)"
-error_symbol = "[❱](italic wave_red)"
-vimcmd_symbol = "[❮](italic dimmed carp_yellow)"
+success_symbol = "[❯](bold italic green)"
+error_symbol = "[❱](italic maroon)"
+vimcmd_symbol = "[❮](italic dimmed yellow)"
 # not supported in zsh
 vimcmd_replace_one_symbol = "◌"
 vimcmd_replace_symbol = "□"
@@ -177,17 +163,17 @@ vimcmd_visual_symbol = "▼"
 
 [env_var.VIMSHELL]
 format = "[$env_value]($style)"
-style = 'spring_green italic'
+style = 'green italic'
 
 [sudo]
 format = "[$symbol]($style)"
-style = "bold italic oni_violet_2"
+style = "bold italic lavender"
 symbol = "⋈┈"
 disabled = false
 
 [username]
-style_user = "surimi_orange bold italic"
-style_root = "oni_violet_2 bold italic"
+style_user = "yellow bold italic"
+style_root = "lavender bold italic"
 format = " [$user]($style) "
 disabled = false
 show_always = true
@@ -198,22 +184,22 @@ truncation_length = 2
 truncation_symbol = "□ "
 read_only = " ◈"
 use_os_path_sep = true
-style = "italic crystal_blue"
+style = "italic blue"
 format = '[$path]($style)[$read_only]($read_only_style)'
-repo_root_style = 'bold oni_violet'
-repo_root_format = '[$before_root_path]($before_repo_root_style)[$repo_root]($repo_root_style)[$path]($style)[$read_only]($read_only_style) [△](bold oni_violet)'
+repo_root_style = 'bold blue'
+repo_root_format = '[$before_root_path]($before_repo_root_style)[$repo_root]($repo_root_style)[$path]($style)[$read_only]($read_only_style) [△](bold blue)'
 
 [cmd_duration]
-format = "[◄ $duration ](italic old_white)"
+format = "[◄ $duration ](italic white)"
 
 [jobs]
 format = "[$symbol$number]($style) "
-style = "fuji_white"
-symbol = "[▶](crystal_blue italic)"
+style = "white"
+symbol = "[▶](blue italic)"
 
 [localip]
 ssh_only = true
-format = " ◯[$localipv4](bold sakura_pink)"
+format = " ◯[$localipv4](bold magenta)"
 disabled = false
 
 [time]
@@ -221,32 +207,32 @@ disabled = false
 format = "[ $time]($style)"
 time_format = "%R"
 utc_time_offset = "local"
-style = "italic dimmed fuji_gray"
+style = "italic dimmed white"
 
 [battery]
 format = "[ $percentage $symbol]($style)"
 full_symbol = "█"
-charging_symbol = "[↑](italic bold spring_green)"
+charging_symbol = "[↑](italic bold green)"
 discharging_symbol = "↓"
 unknown_symbol = "░"
 empty_symbol = "▃"
 
 [[battery.display]]
 threshold = 20
-style = "italic bold samurai_red"
+style = "italic bold red"
 
 [[battery.display]]
 threshold = 60
-style = "italic dimmed oni_violet_2"
+style = "italic dimmed lavender"
 
 [[battery.display]]
 threshold = 70
-style = "italic dimmed carp_yellow"
+style = "italic dimmed yellow"
 
 [git_branch]
 format = " $symbol[$branch(:$remote_branch)]($style)"
-symbol = "[](bold italic sakura_pink)"
-style = "italic oni_violet"
+symbol = "[](bold italic flamingo)"
+style = "italic mauve"
 truncation_symbol = "⋯"
 truncation_length = 11
 ignore_branches = ["main", "master"]
@@ -254,37 +240,37 @@ only_attached = true
 
 [git_metrics]
 format = '([▴$added]($added_style))([▿$deleted]($deleted_style))'
-added_style = 'italic dimmed spring_green'
-deleted_style = 'italic dimmed peach_red'
+added_style = 'italic dimmed green'
+deleted_style = 'italic dimmed red'
 ignore_submodules = true
 disabled = false
 
 [git_status]
-style = "bold italic crystal_blue"
+style = "bold italic blue"
 format = "([⎪$ahead_behind$staged$modified$untracked$renamed$deleted$conflicted$stashed⎥]($style))"
-conflicted = "[◪◦](italic oni_violet)"
-ahead = "[▴│[${count}](bold fuji_white)│](italic spring_green)"
-behind = "[▿│[${count}](bold fuji_white)│](italic peach_red)"
-diverged = "[◇ ▴┤[${ahead_count}](regular fuji_white)│▿┤[${behind_count}](regular fuji_white)│](italic oni_violet)"
-untracked = "[◌◦](italic carp_yellow)"
-stashed = "[◃◈](italic fuji_white)"
-modified = "[●◦](italic carp_yellow)"
-staged = "[▪┤[$count](bold fuji_white)│](italic spring_blue)"
-renamed = "[◎◦](italic crystal_blue)"
-deleted = "[✕](italic peach_red)"
+conflicted = "[◪◦](italic mauve)"
+ahead = "[▴│[${count}](bold white)│](italic green)"
+behind = "[▿│[${count}](bold white)│](italic red)"
+diverged = "[◇ ▴┤[${ahead_count}](regular white)│▿┤[${behind_count}](regular white)│](italic mauve)"
+untracked = "[◌◦](italic yellow)"
+stashed = "[◃◈](italic white)"
+modified = "[●◦](italic yellow)"
+staged = "[▪┤[$count](bold white)│](italic sky)"
+renamed = "[◎◦](italic blue)"
+deleted = "[✕](italic red)"
 
 [deno]
-format = " [deno](italic) [∫ $version](spring_green bold)"
+format = " [deno](italic) [∫ $version](green bold)"
 version_format = "${raw}"
 
 [lua]
 format = " [lua](italic) [${symbol}${version}]($style)"
 version_format = "${raw}"
 symbol = "⨀ "
-style = "bold carp_yellow"
+style = "bold yellow"
 
 [nodejs]
-format = " [node](italic) [◫ ($version)](bold spring_green)"
+format = " [node](italic) [◫ ($version)](bold green)"
 version_format = "${raw}"
 detect_files = ["package-lock.json", "yarn.lock"]
 detect_folders = ["node_modules"]
@@ -292,114 +278,100 @@ detect_extensions = []
 
 [python]
 format = " [py](italic) [${symbol}${version}]($style)"
-symbol = "[⌉](bold crystal_blue)⌊ "
+symbol = "[⌉](bold blue)⌊ "
 version_format = "${raw}"
-style = "bold carp_yellow"
+style = "bold yellow"
 
 [ruby]
 format = " [rb](italic) [${symbol}${version}]($style)"
 symbol = "◆ "
 version_format = "${raw}"
-style = "bold peach_red"
+style = "bold red"
 
 [rust]
 format = " [rs](italic) [$symbol$version]($style)"
 symbol = "⊃ "
 version_format = "${raw}"
-style = "bold peach_red"
+style = "bold red"
 
 [package]
 format = " [pkg](italic dimmed) [$symbol$version]($style)"
 version_format = "${raw}"
 symbol = "◨ "
-style = "dimmed carp_yellow italic bold"
+style = "dimmed yellow italic bold"
 
 [swift]
 format = " [sw](italic) [${symbol}${version}]($style)"
 symbol = "◁ "
-style = "bold peach_red"
+style = "bold red"
 version_format = "${raw}"
 
 [aws]
 disabled = true
 format = " [aws](italic) [$symbol $profile $region]($style)"
-style = "bold crystal_blue"
+style = "bold blue"
 symbol = "▲ "
 
 [buf]
 symbol = "■ "
 format = " [buf](italic) [$symbol $version $buf_version]($style)"
-style = "bold oni_violet"
 
 [c]
 symbol = "ℂ "
 format = " [$symbol($version(-$name))]($style)"
-style = "bold crystal_blue"
 
 [conda]
 symbol = "◯ "
 format = " conda [$symbol$environment]($style)"
-style = "bold spring_green"
 
 [dart]
 symbol = "◁◅ "
 format = " dart [$symbol($version )]($style)"
-style = "bold spring_blue"
 
 [docker_context]
 symbol = "◧ "
 format = " docker [$symbol$context]($style)"
-style = "bold wave_aqua_2"
 
 [elixir]
 symbol = "△ "
 format = " exs [$symbol $version OTP $otp_version ]($style)"
-style = "bold oni_violet_2"
 
 [elm]
 symbol = "◩ "
 format = " elm [$symbol($version )]($style)"
-style = "bold spring_blue"
 
 [golang]
 symbol = "∩ "
 format = " go [$symbol($version )]($style)"
-style = "bold spring_blue"
 
 [haskell]
 symbol = "❯λ "
 format = " hs [$symbol($version )]($style)"
-style = "bold oni_violet"
 
 [java]
 symbol = "∪ "
 format = " java [${symbol}(${version} )]($style)"
-style = "bold surimi_orange"
 
 [julia]
 symbol = "◎ "
 format = " jl [$symbol($version )]($style)"
-style = "bold sakura_pink"
 
 [memory_usage]
 symbol = "▪▫▪ "
 format = " mem [${ram}( ${swap})]($style)"
-style = "bold carp_yellow"
 
 [nim]
 symbol = "▴▲▴ "
 format = " nim [$symbol($version )]($style)"
-style = "bold autumn_yellow"
 
 [nix_shell]
-style = 'bold italic dimmed crystal_blue'
+style = 'bold italic dimmed blue'
 symbol = '✶'
-format = '[$symbol nix⎪$state⎪]($style) [$name](italic dimmed fuji_white)'
-impure_msg = '[⌽](bold dimmed samurai_red)'
-pure_msg = '[⌾](bold dimmed spring_green)'
-unknown_msg = '[◌](bold dimmed carp_yellow)'
+format = '[$symbol nix⎪$state⎪]($style) [$name](italic dimmed white)'
+impure_msg = '[⌽](bold dimmed red)'
+pure_msg = '[⌾](bold dimmed green)'
+unknown_msg = '[◌](bold dimmed ellow)'
 
 [spack]
 symbol = "◇ "
 format = " spack [$symbol$environment]($style)"
-style = "bold spring_green"
